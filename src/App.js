@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+// Importar otros componentes
+import Header from './components/Header/index';
+import CountChart from './components/CountChar';
+import ListCountCharacter from './components/ListCountCharacter';
+import Alert from './components/Alert';
+import Loading from './components/Loading';
+import EmptyComponent from './components/EmptyComponent';
+
+// Importar estilos
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+// Importar state
+import ChallengeState from './context/challengeState';
+
+const App = () => (
+  <ChallengeState>
+    <div className="page">
+      <header className="header">
+        <Header />
       </header>
+      <main className="main-container">
+        <EmptyComponent />
+        <Loading />
+        <Alert />
+        <CountChart />
+        <ListCountCharacter />
+      </main>
     </div>
-  );
-}
+  </ChallengeState>
+);
 
 export default App;

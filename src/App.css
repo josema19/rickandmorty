@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    min-height: 150px;
+    background-image: linear-gradient(
+            rgba(1, 0, 58, 0.5),
+            rgba(171, 184, 195, 0.7)
+        ),
+        url("./img/rickmorty.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.empty-component {
+    border-radius: 5px;
+    border: 2px solid black;
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+    margin-top: 100px;
+    background-color: #7d7d7d;
+    color: yellow;
 }
