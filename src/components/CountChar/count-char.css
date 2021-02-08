@@ -8,8 +8,16 @@
 
 .container-titles {
     display: flex;
-    justify-content: space-evenly;
-    width: 80%;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .container-titles {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 80%;
+    }
 }
 
 .container-titles h3 {
@@ -24,6 +32,7 @@
 
 .container-box {
     display: flex;
+    flex-wrap: wrap;
     flex: 25%;
     text-align: center;
     border: 1px solid yellow;

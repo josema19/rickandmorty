@@ -65,7 +65,7 @@ const CountChar = () => {
             <h1>Localizaciones - Episodios - Personajes</h1>
             <div className="container-titles">
               <h3>Número total de ocurrencias de {char}: {countLocations.totalCount + countEpisodes.totalCount + countCharacters.totalCount}</h3>
-              <h3>Tiempo estimado de ejecución: {endTime - startTime || 0}</h3>
+              <h3>Tiempo estimado de ejecución: {endTime - startTime || 0} milisegundos</h3>
             </div>
           </>
         )}

@@ -1,6 +1,8 @@
 // Importar acciones
 import {
-  SUCCESSFUL_GET_API_INFORMATION,
+  SUCCESSFUL_GET_LOCATION_INFORMATION,
+  SUCCESSFUL_GET_EPISODE_INFORMATION,
+  SUCCESSFUL_GET_CHARACTER_INFORMATION,
   FAILED_GET_API_INFORMATION,
   SET_CHALLENGE_STATE,
   CLEAN_MESSAGE,
@@ -22,19 +24,26 @@ const challengeReducer = (state, action) => {
         ...state,
         message: action.payload,
       };
-    case SUCCESSFUL_GET_API_INFORMATION:
+    case SUCCESSFUL_GET_LOCATION_INFORMATION:
       return {
         ...state,
-        characters: action.payload.characters,
-        locations: action.payload.locations,
-        episodes: action.payload.episodes,
+        locations: action.payload,
+      };
+    case SUCCESSFUL_GET_EPISODE_INFORMATION:
+      return {
+        ...state,
+        episodes: action.payload,
+      };
+    case SUCCESSFUL_GET_CHARACTER_INFORMATION:
+      return {
+        ...state,
+        characters: action.payload,
       };
     case SET_CHALLENGE_STATE:
       return {
         ...state,
         challenge: action.payload.name,
         char: action.payload.char,
-        loading: true,
       };
     case SET_COUNTERS:
       return {
@@ -42,17 +51,19 @@ const challengeReducer = (state, action) => {
         countLocations: action.payload.countLocations,
         countEpisodes: action.payload.countEpisodes,
         countCharacters: action.payload.countCharacters,
-        loading: false,
+        globalSerie: action.payload.globalSerie,
       };
     case SET_INITIAL_TIME:
       return {
         ...state,
         startTime: performance.now(),
+        loading: true,
       };
     case SET_END_TIME:
       return {
         ...state,
         endTime: performance.now(),
+        loading: false,
       };
     default:
       return state;
