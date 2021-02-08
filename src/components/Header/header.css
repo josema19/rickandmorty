@@ -1,0 +1,60 @@
+.site-name h1 {
+    color: yellow;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu-challenge-two,
+.menu-challenge-one {
+    flex: 50%;
+    text-align: center;
+    border: 1px solid black;
+    border-style: dashed;
+}
+
+.menu-challenge-two h2,
+.menu-challenge-one h2 {
+    margin: 0;
+    padding: 10px;
+    color: whitesmoke;
+    border: 1px solid black;
+    border-style: dashed;
+}
+
+.challenge-two-content,
+.challenge-one-content {
+    display: flex;
+}
+
+.challenge-two-content > div,
+.challenge-one-content > div {
+    color: whitesmoke;
+    border-right: 1px dashed black;
+    width: 100%;
+}
+
+.challenge-two-content > div:last-child,
+.challenge-one-content > div:last-child {
+    border-right: none;
+}
+
+.challenge-two-content > div:hover,
+.challenge-one-content > div:hover {
+    color: yellow;
+    background-color: #abb8c3;
+    cursor: pointer;
+}
+
+.challenge-two-content span,
+.challenge-one-content span {
+    font-weight: bold;
+}
+
+.location,
+.episode,
+.character,
+.first-all,
+.second-all {
+    color: yellow !important;
+    background-color: #abb8c3;
+}

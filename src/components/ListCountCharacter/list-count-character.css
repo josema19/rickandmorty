@@ -1,0 +1,25 @@
+.map-container-box {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid red;
+}
+
+.map-box-item {
+    width: 100%;
+}
+
+.container-box-item-map {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.content-box-item-map {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.content-box-item-map > div {
+    flex: 50%;
+}
